@@ -1,0 +1,245 @@
+@font-face {
+	font-family: "Pixel Font";
+	src: url("PixelFont.ttf") format("truetype");
+}
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	font-family: "Pixel Font";
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+html {
+	width: 100%;
+	height: 100%;
+}
+body {
+	width: 100%;
+	height: 100%;
+	background-image: url("../img/Tileset/Magic-Cliffs-Environment/PNG/sky.png");
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+	background-size: auto 100%;
+	overflow: hidden;
+}
+#preload {
+	background-image: url("../img/jumpright.gif"), url("../img/jumpleft.gif"), url("../img/idleright.gif"), url("../img/idleleft.gif"), url("../img/movementright.gif"), url("../img/movementleft.gif");
+	background: no-repeat -9999px -9999px;
+}
+#HUD {
+	position: absolute;
+	display: block;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+#score {
+	margin-top: 10px;
+	font-size: 30px;
+	text-align: center;
+}
+.menuScreen {
+	position: absolute;
+	display: none;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+.menuScreen h1 {
+	font-size: 50px;
+	margin-top: 5%;
+	margin-bottom: 30px;
+	color: #ddd;
+	text-shadow: 1px 1px 1px black;
+}
+.menuScreen * {
+	text-align: center;
+	color: #fff;
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+.menuScreen div {
+	cursor: pointer;
+	height: 60px;
+	width: 500px;
+	margin: auto;
+}
+.menuScreen div:hover {
+	font-size: 35px;
+}
+.menuScreen div:hover::before {
+	content: '° ';
+}
+.menuScreen div:hover::after {
+	content: ' °';
+}
+.menuScreen h2 {
+	font-size: 35px;
+}
+#layout:hover, #layoutcontainer:hover, #creditsContainer:hover {
+	font-size: 30px;
+}
+#layout:hover::before, #layoutcontainer:hover::before, #creditsContainer:hover::before {
+	content: none;
+}
+#layout:hover::after, #layoutcontainer:hover::after, #creditsContainer:hover::after {
+	content: none;
+}
+#layoutcontainer {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	height: 40px;
+	width: 300px;
+	left: 0;
+	right: 0;
+	background-color: #bbb;
+}
+#layout {
+	display: block;
+    position: absolute;
+    height: 40px;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 10;
+    cursor: pointer;
+}
+.darker {
+	display: block;
+	background-color: rgba(10, 10, 10, 0.8);
+	z-index: 100;
+}
+#creditsContainer {
+	display: block;
+	height: auto;
+	width: 70%;
+	margin: auto;
+	padding: 20px 5px 5px 5px; 
+	background-color: #333;
+	border-radius: 10px;
+	margin-bottom: 15px;
+	border: 5px groove #999;
+	box-shadow: 0px 0px 1px 1px #555;
+}
+#creditsContainer p {
+	font-size: 18px;
+	text-align: left;
+}
+#creditsContainer b {
+	font-size: 20px;
+}
+#creditsContainer a {
+	font-size: 19px;
+	cursor: pointer;
+}
+.startScreen {
+	display: block;
+	background-image: url('../img/start.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 100;
+}
+#gameContent {
+	position: absolute;
+	display: block;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-image: url("../img/Tileset/Magic-Cliffs-Environment/PNG/clouds.png");
+	background-repeat: repeat-x;
+	background-size: auto 90%;
+	background-position: bottom;
+	cursor: none;
+}
+#gameContent * {
+	cursor: none;
+}
+.floor {
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	top: 90%;
+	background-image: url("../img/Tileset/greentileset-lowpixel.png");
+}
+.left0 {
+	background-position: -108px 299px;
+}
+.left1 {
+	background-position: -108px 200px;
+}
+.left2 {
+	background-position: -108px 398px;
+}
+.left3 {
+	background-position: -108px 497px;
+}
+.right0 {
+	background-position: -603px 299px;
+}
+.right1 {
+	background-position: -603px 200px;
+}
+.right2 {
+	background-position: -603px 398px;
+}
+.right3 {
+	background-position: -603px 497px;
+}
+.middle0 {
+	background-position: -207px 299px;
+}
+.middle1 {
+	background-position: -306px 299px;
+}
+.middle2 {
+	background-position: -405px 299px;
+}
+.middle3 {
+	background-position: -504px 299px;
+}
+.middle4 {
+	background-position: -207px 200px;
+}
+.middle5 {
+	background-position: -306px 200px;
+}
+.middle6 {
+	background-position: -405px 200px;
+}
+.middle7 {
+	background-position: -504px 200px;
+}
+.middle8 {
+	background-position: -207px 398px;
+}
+.middle9 {
+	background-position: -306px 398px;
+}
+.middle10 {
+	background-position: -405px 398px;
+}
+.middle11 {
+	background-position: -504px 398px;
+}
+.middle12 {
+	background-position: -504px 497px;
+}
+.middle13 {
+	background-position: -405px 497px;
+}
+.middle14 {
+	background-position: -306px 497px;
+}
+.middle15 {
+	background-position: -207px 497px;
+}
