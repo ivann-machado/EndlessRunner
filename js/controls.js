@@ -77,10 +77,14 @@
         },
         changeControl: function (action, game) {
             var self = this;
+            var pop = document.getElementById('pop') || false;
             function controlChangeHandler(e) {
-                if (e.key !== 'Escape') {
+                if (e.key !== 'Escape' && pop) {
                     self.keys[action] = e.key.toLowerCase();
                     game.screen.controlsScreen();
+                }
+                if (pop) {
+                    pop.remove();
                 }
                 document.removeEventListener('keyup', controlChangeHandler);
             }

@@ -6,7 +6,8 @@
     global.Utils = {
         createBody: function (bodyURL, start) {
             var body = document.createElement('div');
-            Object.assign(body.style, {position: 'absolute', height: '160px', width: '150px', backgroundColor: '',backgroundImage: 'url(' + bodyURL + ')', backgroundPosition: '0px -10px'});
+            Object.assign(body.style, {position: 'absolute', height: '160px', width: '150px', backgroundColor: ''});
+            body.className = 'idleright';
             gameContent.appendChild(body);
             return body;
         },
@@ -15,7 +16,7 @@
         },
         changeStance: function (body, bodyURL) {
             requestAnimationFrame(function () {
-                Object.assign(body.style, {backgroundImage: 'url(' + bodyURL + ')'});
+                body.className = bodyURL;
             });
         },
         highscore: {

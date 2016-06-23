@@ -28,10 +28,6 @@ body {
 	background-size: auto 100%;
 	overflow: hidden;
 }
-#preload {
-	background-image: url("../img/jumpright.gif"), url("../img/jumpleft.gif"), url("../img/idleright.gif"), url("../img/idleleft.gif"), url("../img/movementright.gif"), url("../img/movementleft.gif");
-	background: no-repeat -9999px -9999px;
-}
 #HUD {
 	position: absolute;
 	display: block;
@@ -66,32 +62,23 @@ body {
 	font-size: 30px;
 	margin-bottom: 20px;
 }
-.menuScreen div {
+.menuItem {
 	cursor: pointer;
 	height: 60px;
 	width: 600px;
 	margin: auto;
 }
-.menuScreen div:hover {
+.menuItem:hover {
 	font-size: 35px;
 }
-.menuScreen div:hover::before {
+.menuItem:hover::before {
 	content: '° ';
 }
-.menuScreen div:hover::after {
+.menuItem:hover::after {
 	content: ' °';
 }
 .menuScreen h2 {
 	font-size: 35px;
-}
-#layout:hover, #layoutcontainer:hover, #creditsContainer:hover {
-	font-size: 30px;
-}
-#layout:hover::before, #layoutcontainer:hover::before, #creditsContainer:hover::before {
-	content: none;
-}
-#layout:hover::after, #layoutcontainer:hover::after, #creditsContainer:hover::after {
-	content: none;
 }
 #layoutcontainer {
 	position: relative;
@@ -118,7 +105,7 @@ body {
 	background-color: rgba(10, 10, 10, 0.8);
 	z-index: 100;
 }
-#creditsContainer {
+#creditsContainer, #pop {
 	display: block;
 	height: auto;
 	width: 70%;
@@ -242,4 +229,28 @@ body {
 }
 .middle15 {
 	background-position: -207px 497px;
+}
+.idleleft {
+	background-image: url(../img/idleleft.gif);
+	background-position: 0px -10px;
+}
+.idleright {
+	background-image: url(../img/idleright.gif);
+	background-position: 0px -10px;
+}
+.jumpleft {
+	background-image: url(../img/jumpleft.gif);
+	background-position: 0px -10px;
+}
+.jumpright {
+	background-image: url(../img/jumpright.gif);
+	background-position: 0px -10px;
+}
+.movementleft {
+	background-image: url(../img/movementleft.gif);
+	background-position: 0px -10px;
+}
+.movementright {
+	background-image: url(../img/movementright.gif);
+	background-position: 0px -10px;
 }

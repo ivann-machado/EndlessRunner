@@ -183,12 +183,15 @@
                         self.screen.highscoreScreen();
                         break;
                     case 'jump':
+                        self.screen.controlsPopScreen();
                         self.characters[0].controls.changeControl('jump', self);
                         break;
                     case 'left':
+                        self.screen.controlsPopScreen();
                         self.characters[0].controls.changeControl('left', self);
                         break;
                     case 'right':
+                        self.screen.controlsPopScreen();
                         self.characters[0].controls.changeControl('right', self);
                         break;
                 }

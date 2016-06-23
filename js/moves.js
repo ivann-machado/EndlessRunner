@@ -14,10 +14,10 @@
             self.jumpPower = 45;
             self.boundTo.jumping = true;
             if (self.boundTo.actualStance === 'moving-left') {
-                Utils.changeStance(self.boundTo.body, 'img/jumpleft.gif');
+                Utils.changeStance(self.boundTo.body, 'jumpleft');
             }
             else {
-                Utils.changeStance(self.boundTo.body, 'img/jumpright.gif');
+                Utils.changeStance(self.boundTo.body, 'jumpright');
             }
             Utils.SFX.jump.currentTime = 0;
             Utils.SFX.jump.play();
@@ -39,18 +39,18 @@
                             self.boundTo.jumping = false;
                             if (self.moving) {
                                 if (self.boundTo.actualStance === 'moving-right') {
-                                    Utils.changeStance(self.boundTo.body, 'img/movementright.gif');
+                                    Utils.changeStance(self.boundTo.body, 'movementright');
                                 }
                                 else if (self.boundTo.actualStance === 'moving-left') {
-                                    Utils.changeStance(self.boundTo.body, 'img/movementleft.gif');
+                                    Utils.changeStance(self.boundTo.body, 'movementleft');
                                 }
                             }
                             else {
                                 if (self.boundTo.actualStance === 'moving-left') {
-                                    Utils.changeStance(self.boundTo.body, 'img/idleleft.gif');
+                                    Utils.changeStance(self.boundTo.body, 'idleleft');
                                 }
                                 else {
-                                    Utils.changeStance(self.boundTo.body, 'img/idleright.gif');
+                                    Utils.changeStance(self.boundTo.body, 'idleright');
                                 }
                             }
                             clearInterval(int);
@@ -68,10 +68,10 @@
             var under = Utils.checkUnder(self.boundTo.position, self.fallingSpeed);
             if (!under) {
                 if (self.boundTo.actualStance === 'moving-left') {
-                    Utils.changeStance(self.boundTo.body, 'img/jumpleft.gif');
+                    Utils.changeStance(self.boundTo.body, 'jumpleft');
                 }
                 else {
-                    Utils.changeStance(self.boundTo.body, 'img/jumpright.gif');
+                    Utils.changeStance(self.boundTo.body, 'jumpright');
                 }
                 if (!self.boundTo.falling) {
                     self.fallingSpeed = 0;
@@ -94,18 +94,18 @@
                                     self.boundTo.falling = false;
                                     if (self.moving) {
                                         if (self.boundTo.actualStance === 'moving-right') {
-                                            Utils.changeStance(self.boundTo.body, 'img/movementright.gif');
+                                            Utils.changeStance(self.boundTo.body, 'movementright');
                                         }
                                         else if (self.boundTo.actualStance === 'moving-left') {
-                                            Utils.changeStance(self.boundTo.body, 'img/movementleft.gif');
+                                            Utils.changeStance(self.boundTo.body, 'movementleft');
                                         }
                                     }
                                     else {
                                         if (self.boundTo.actualStance === 'moving-left') {
-                                            Utils.changeStance(self.boundTo.body, 'img/idleleft.gif');
+                                            Utils.changeStance(self.boundTo.body, 'idleleft');
                                         }
                                         else {
-                                            Utils.changeStance(self.boundTo.body, 'img/idleright.gif');
+                                            Utils.changeStance(self.boundTo.body, 'idleright');
                                         }
                                     }
                                     clearInterval(int);
@@ -127,11 +127,11 @@
             if (!self.moving) {
                 var int = setInterval(function () {
                     if (!self.boundTo.game.attributes.pause) {
-                        if (self.boundTo.body.src !== 'img/movementleft.gif' && !self.boundTo.jumping && !self.boundTo.falling) {
-                            Utils.changeStance(self.boundTo.body, 'img/movementleft.gif');
+                        if (self.boundTo.body.src !== 'movementleft' && !self.boundTo.jumping && !self.boundTo.falling) {
+                            Utils.changeStance(self.boundTo.body, 'movementleft');
                         }
-                        else if (self.boundTo.body.src !== 'img/jumpleft.gif') {
-                            Utils.changeStance(self.boundTo.body, 'img/jumpleft.gif');
+                        else if (self.boundTo.body.src !== 'jumpleft') {
+                            Utils.changeStance(self.boundTo.body, 'jumpleft');
                         }
                         self.moving = true;
                         requestAnimationFrame(function () {
@@ -158,14 +158,14 @@
                                 }
                                 if (self.speed === 0 || collision !== false) {
                                     self.moving = false;
-                                    Utils.changeStance(self.boundTo.body, 'img/idleleft.gif');
+                                    Utils.changeStance(self.boundTo.body, 'idleleft');
                                     clearInterval(int);
                                 }
                             }
                             else {
                                 self.moving = false;
                                 if (!self.boundTo.jumping && !self.boundTo.falling) {
-                                    Utils.changeStance(self.boundTo.body, 'img/idleleft.gif');
+                                    Utils.changeStance(self.boundTo.body, 'idleleft');
                                 }
                                 clearInterval(int);
                             }
@@ -181,11 +181,11 @@
             if (!self.moving) {
                 var int = setInterval(function () {
                     if (!self.boundTo.game.attributes.pause) {
-                        if (self.boundTo.body.src !== 'img/movementright.gif' && !self.boundTo.jumping && !self.boundTo.falling) {
-                            Utils.changeStance(self.boundTo.body, 'img/movementright.gif');
+                        if (self.boundTo.body.src !== 'movementright' && !self.boundTo.jumping && !self.boundTo.falling) {
+                            Utils.changeStance(self.boundTo.body, 'movementright');
                         }
-                        else if (self.boundTo.body.src !== 'img/jumpright.gif') {
-                            Utils.changeStance(self.boundTo.body, 'img/jumpright.gif');
+                        else if (self.boundTo.body.src !== 'jumpright') {
+                            Utils.changeStance(self.boundTo.body, 'jumpright');
                         }
                         self.moving = true;
                         requestAnimationFrame(function () {
@@ -212,14 +212,14 @@
                                 }
                                 if (self.speed === 0 || collision !== false) {
                                     self.moving = false;
-                                    Utils.changeStance(self.boundTo.body, 'img/idleright.gif');
+                                    Utils.changeStance(self.boundTo.body, 'idleright');
                                     clearInterval(int);
                                 }
                             }
                             else {
                                 self.moving = false;
                                 if (!self.boundTo.jumping && !self.boundTo.falling) {
-                                    Utils.changeStance(self.boundTo.body, 'img/idleright.gif');
+                                    Utils.changeStance(self.boundTo.body, 'idleright');
                                 }
                                 clearInterval(int);
                             }

@@ -17,18 +17,23 @@
             title.innerText = 'Flee From Pangolin';
             var play = document.createElement('div');
             play.id = 'play';
+            play.classList.add('menuItem');
             play.innerText = 'Play';
             var controls = document.createElement('div');
             controls.id = 'controls';
+            controls.classList.add('menuItem');
             controls.innerText = 'Controls';
             var sound = document.createElement('div');
             sound.id = 'sound';
+            sound.classList.add('menuItem');
             sound.innerText = 'Sound';
             var highscore = document.createElement('div');
             highscore.id = 'highscore';
+            highscore.classList.add('menuItem');
             highscore.innerText = 'HighScore';
             var credits = document.createElement('div');
             credits.id = 'credits';
+            credits.classList.add('menuItem');
             credits.innerText = 'Credits';
             this.screen.appendChild(title);
             this.screen.appendChild(play);
@@ -51,6 +56,7 @@
             creditsContainer.innerHTML += '<p><b>Character :</b> WorldWithoutWords</p>';
             var back = document.createElement('div');
             back.id = 'back';
+            back.classList.add('menuItem');
             back.innerText = 'Back';
             this.screen.appendChild(title);
             this.screen.appendChild(creditsContainer);
@@ -62,15 +68,19 @@
             title.innerText = 'Controls';
             var jump = document.createElement('div');
             jump.id = 'jump';
+            jump.classList.add('menuItem');
             jump.innerText = 'Jump: ' + (this.game.characters[0].controls.keys.jump === ' ' ? 'Spacebar' : this.game.characters[0].controls.keys.jump.toUpperCase());
             var left = document.createElement('div');
             left.id = 'left';
+            left.classList.add('menuItem');
             left.innerText = 'Left move: ' + (this.game.characters[0].controls.keys.left === ' ' ? 'Spacebar' : this.game.characters[0].controls.keys.left.toUpperCase());
             var right = document.createElement('div');
             right.id = 'right';
+            right.classList.add('menuItem');
             right.innerText = 'Right move: ' + (this.game.characters[0].controls.keys.right === ' ' ? 'Spacebar' : this.game.characters[0].controls.keys.right.toUpperCase());
             var back = document.createElement('div');
             back.id = 'back';
+            back.classList.add('menuItem');
             back.innerText = 'Back';
             this.screen.appendChild(title);
             this.screen.appendChild(jump);
@@ -78,21 +88,31 @@
             this.screen.appendChild(right);
             this.screen.appendChild(back);
         },
+        controlsPopScreen: function () {
+            var pop = document.createElement('div');
+            pop.id = 'pop';
+            pop.innerText = 'Press a key to change or Escape to cancel';
+            this.screen.appendChild(pop);
+        },
         soundScreen: function () {
             this.screen.innerHTML = '';
             var title = document.createElement('h1');
             title.innerText = 'Sound';
             var master = document.createElement('div');
             master.id = 'master';
+            master.classList.add('menuItem');
             master.innerText = 'Master';
             var theme = document.createElement('div');
             theme.id = 'theme';
+            theme.classList.add('menuItem');
             theme.innerText = 'Theme';
             var sfx = document.createElement('div');
             sfx.id = 'sfx';
+            sfx.classList.add('menuItem');
             sfx.innerText = 'SFX';
             var back = document.createElement('div');
             back.id = 'back';
+            back.classList.add('menuItem');
             back.innerText = 'Back';
             this.screen.appendChild(title);
             this.screen.appendChild(master);
@@ -112,6 +132,7 @@
             layout.id = 'layout';
             var back = document.createElement('div');
             back.id = 'backsoundscreen';
+            back.classList.add('menuItem');
             back.innerText = 'Back';
             this.screen.appendChild(title);
             this.screen.appendChild(subtitle);
@@ -134,6 +155,7 @@
             }
             var back = document.createElement('div');
             back.id = 'back';
+            back.classList.add('menuItem');
             back.innerText = 'Back';
             this.screen.appendChild(back);
         },
@@ -163,9 +185,11 @@
             title.innerText = 'GAME OVER';
             var play = document.createElement('div');
             play.id = 'play';
+            play.classList.add('menuItem');
             play.innerText = 'Retry';
             var startscreen = document.createElement('div');
             startscreen.id = 'startscreen';
+            startscreen.classList.add('menuItem');
             startscreen.innerText = 'Title Screen';
             this.screen.appendChild(title);
             this.screen.appendChild(play);
