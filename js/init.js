@@ -20,19 +20,19 @@
                         obj.level = 1;
                         this.changeTheme(obj, 1);
                     }
-                    if (value >= 3000) {
+                    if (value >= 1200) {
                         if (obj.level === 1) {
                             obj.level = 2;
                             this.changeTheme(obj, 2);
                         }
                     }
-                    if (value >= 15000) {
+                    if (value >= 10000) {
                         if (obj.level === 2) {
                             obj.level = 3;
                             this.changeTheme(obj, 3);
                         }
                     }
-                    if (value >= 42000) {
+                    if (value >= 25000) {
                         if (obj.level === 3) {
                             obj.level = 4;
                             this.changeTheme(obj, 4);
